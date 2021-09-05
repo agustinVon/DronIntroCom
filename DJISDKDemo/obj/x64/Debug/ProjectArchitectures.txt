@@ -1,0 +1,1 @@
+C:\Users\Pc\projects\DJISDKDemo\DJISDKDemo\DJISDKDemo.csproj;x64
