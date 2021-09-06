@@ -306,6 +306,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -791,6 +800,15 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
         }
       }
     },
@@ -1279,6 +1297,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1766,6 +1793,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2251,6 +2287,15 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
         }
       }
     },
@@ -2739,6 +2784,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3224,6 +3278,15 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
         }
       }
     },
@@ -3711,6 +3774,15 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "DJIVideoParser/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DJIVideoParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DJIVideoParser.dll": {}
         }
       }
     }
@@ -8150,26 +8222,32 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "DJIVideoParser/1.0.0": {
+      "type": "project",
+      "path": "../DJIVideoParser/DJIVideoParser.vcxproj",
+      "msbuildProject": "../DJIVideoParser/DJIVideoParser.vcxproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "DJIVideoParser >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pc\\.nuget\\packages\\": {},
+    "C:\\Users\\fliav\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj",
+      "projectUniqueName": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
       "projectName": "DJISDKDemo",
-      "projectPath": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj",
-      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\obj\\",
+      "projectPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
+      "packagesPath": "C:\\Users\\fliav\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8177,7 +8255,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fliav\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8185,11 +8263,16 @@
         "uap10.0.17763"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "uap10.0.17763": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj": {
+              "projectPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj"
+            }
+          }
         }
       }
     },

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj": {}
+    "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj": {
+    "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj",
+        "projectUniqueName": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
         "projectName": "DJISDKDemo",
-        "projectPath": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\DJISDKDemo.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pc\\projects\\DJISDKDemo\\DJISDKDemo\\obj\\",
+        "projectPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
+        "packagesPath": "C:\\Users\\fliav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fliav\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,11 +27,16 @@
           "uap10.0.17763"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "uap10.0.17763": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj": {
+                "projectPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj"
+              }
+            }
           }
         }
       },
@@ -72,6 +77,16 @@
         "win10-x86-aot": {
           "#import": []
         }
+      }
+    },
+    "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj",
+        "projectName": "DJIVideoParser",
+        "projectPath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJIVideoParser\\DJIVideoParser.vcxproj"
+      },
+      "frameworks": {
+        "native": {}
       }
     }
   }

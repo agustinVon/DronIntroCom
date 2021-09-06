@@ -16,9 +16,9 @@
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
-    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.30035.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.NET.CoreRuntime.2.2" MinVersion="2.2.29713.2" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.NET.CoreFramework.Debug.2.2" MinVersion="2.2.29301.2" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.30035.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
@@ -38,8 +38,19 @@
         <Function Type="name:serialPort" />
       </Device>
     </DeviceCapability>
+    <DeviceCapability Name="usb">
+      <Device Id="vidpid:2ca3 001f">
+        <Function Type="name:vendorSpecific" />
+      </Device>
+    </DeviceCapability>
   </Capabilities>
   <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>DJIVideoParser.dll</Path>
+        <ActivatableClass ActivatableClassId="DJIVideoParser.Parser" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>DJISDKDemo.exe</Path>
@@ -49,148 +60,148 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>DJIWindowsWrapper.dll</Path>
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PlayingAudioFileInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ObstacleDetectionSector" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUStates" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerModifyAccountMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraSDCardStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDeleteFilesInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointAction" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalROIMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VissionDetectionState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalCalibrationState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraDisplayModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraTypeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraISOMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoBurstCountMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileList" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoIntervalShootSettings" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsLocationHandle" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SimulatorInitializationSettings" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioSendingStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaDeletionRequest" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFileIndexModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraExposureCompensationMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoStorageFormatMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoFileCompressionStandardMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BottomAuxiliaryLightModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGPSModeFailureReasonMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Attitude" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoStorageFormatMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraAutoTurnOffLEDModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCMotorStartFailureErrorMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaTaskResponse" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalIsothermUnitMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalPaletteRangeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCFlightModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraExposureModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUMultipleOrientationCalibrationHint" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerFileRenameInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseGroup" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGoHomeStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoublePoint3D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalGainModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalAttitudeRange" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFocusStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraContinuousOpticalZoomParam" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerFormattingProgressStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsNetworkHandle" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FileExifInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCFailsafeActionMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraShootPhotoModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraColorRangeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BoolMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DateTime" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCRemoteControllerSwitchModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ProductTypeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BatteryHeatingStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDataPack" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileDownloadRequest" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraMeteringModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsDatalinkHandler" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeAreaLicenseInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraOrientationMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsWrappedInterfaces" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Velocity3D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionDownloadState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseBaseInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGPSSignalLevelMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraTemperatureUnitMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AirSenseAirplaneState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalPaletteMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalFFCModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalResetCommandMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaStarTagRequest" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaTaskRequest" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoResolutionFrameRate" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCBatteryThresholdBehaviorMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraShutterSpeedMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDataSendingResultMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AirSenseSystemInformation" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionStateTransition" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileListRequest" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWatermarkSettings" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCAutoRTHReasonMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFilesIndexes" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraPanoTypeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WiFiFrequencyBandMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileUploadingInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.RCFlightModeSwitchMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCWindWarningMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCCompassCalibrationStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraAntiFlickerMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionUploadState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LocationCoordinate2D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerPlayModeTypeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Waypoint" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VisionSystemWarningMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFocusModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileList" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraStorageLocationMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DecodingAssistInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalMeasurementModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsWrapperComponentHandler" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerUserAccountInfoMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWhiteBalance" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.EmptyMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LandingProtectionStateMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoRatioMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.StringMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntPoint2D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeCircleLicenseInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLimitArea" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntMinMax" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GeneratedMediaFileInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeCountryLicenseInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoublePoint2D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntVector2D" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMission" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GoHomeAssessmentValue" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraActualFocusArea" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalSpeedRotation" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LEDsSettings" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraOpticalZoomSpec" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SDKActivationInfo" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionExecutionState" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileListLocationMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseGroupMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaBatchFileRequestResult" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLimitAreaMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFile" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoubleMinMax" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraHistogram" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ThermalAreaTemperatureAggregationsMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWorkModeMsg" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeHeightLicenseInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalAngleRotation" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsUSBHandler" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerUserAccountInfoMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoublePoint3D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraShutterSpeedMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntVector2D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGoHomeStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraSDCardStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFocusStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaStarTagRequest" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BoolMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraContinuousOpticalZoomParam" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFilesIndexes" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionDownloadState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GeneratedMediaFileInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeCircleLicenseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraMeteringModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaDeletionRequest" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoublePoint2D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ProductTypeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WiFiFrequencyBandMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalAttitudeRange" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraColorMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWatermarkSettings" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraDisplayModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraActualFocusArea" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCFailsafeActionMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VissionDetectionState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoStorageFormatMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseGroup" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaTaskResponse" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ObstacleDetectionSector" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntMinMax" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsWrapperComponentHandler" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Waypoint" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraAutoTurnOffLEDModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalPaletteRangeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoRatioMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BatteryHeatingStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalAngleRotation" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseBaseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalMeasurementModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerFileRenameInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCFlightModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsNetworkHandle" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoResolutionFrameRate" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraOrientationMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoStorageFormatMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoubleMinMax" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCBatteryThresholdBehaviorMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLimitArea" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraPanoTypeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VideoFileCompressionStandardMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntPoint2D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDataPack" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCAutoRTHReasonMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioSendingStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoIntervalShootSettings" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Velocity3D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsWrappedInterfaces" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeCountryLicenseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.VisionSystemWarningMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileDownloadRequest" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DateTime" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.StringMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalGainModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCRemoteControllerSwitchModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUStates" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLimitAreaMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalPaletteMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PhotoBurstCountMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalIsothermUnitMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SimulatorInitializationSettings" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraStorageLocationMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerPlayModeTypeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFileIndexModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsDatalinkHandler" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalROIMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalResetCommandMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraExposureModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsLocationHandle" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.RCFlightModeSwitchMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFile" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FileExifInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWhiteBalance" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDeleteFilesInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioDataSendingResultMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCCompassCalibrationStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraWorkModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerFormattingProgressStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileUploadingInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraShootPhotoModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraISOMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LEDsSettings" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeHeightLicenseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraColorRangeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IntMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LandingProtectionStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AirSenseAirplaneState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraThermalFFCModeMsg" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafePolygonLicenseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionUploadState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraExposureCompensationMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.ThermalAreaTemperatureAggregationsMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileList" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AirSenseSystemInformation" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCWindWarningMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUMultipleOrientationCalibrationHint" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileInfo" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DoubleMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SpeakerAudioFileList" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaTaskRequest" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointAction" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalCalibrationState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.GimbalSpeedRotation" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCMotorStartFailureErrorMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileListRequest" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.SDKActivationInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.PlayingAudioFileInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeLicenseGroupMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGPSModeFailureReasonMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaBatchFileRequestResult" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraTemperatureUnitMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FCGPSSignalLevelMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraHistogram" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerStateMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.Attitude" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.EmptyMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraOpticalZoomSpec" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.IMUState" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DJIWindowsUSBHandler" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.BottomAuxiliaryLightModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.LocationCoordinate2D" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMissionStateTransition" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraAntiFlickerMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.DecodingAssistInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.WaypointMission" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraTypeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.CameraFocusModeMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.AccessLockerModifyAccountMsg" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.FlysafeAreaLicenseInfo" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="DJIWindowsWrapper.MediaFileListLocationMsg" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>

@@ -1,1 +1,2 @@
-C:\Users\Pc\projects\DJISDKDemo\DJISDKDemo\DJISDKDemo.csproj;x64
+C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\DJISDKDemo.csproj;x64
+C:\Users\fliav\tpAgus\DronIntroCom\DJIVideoParser\DJIVideoParser.vcxproj;x64
