@@ -147,7 +147,6 @@
     <Content Include="pthread_dll-x64.dll" />
     <Content Include="swresample-3.dll" />
     <Content Include="swscale-5.dll" />
-    <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
