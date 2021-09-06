@@ -10,3 +10,4 @@ App.xbf
 DJISDKDemo.xr.xml
 MainPage.xbf
 Properties\Default.rd.xml
+pthread_dll-x64.dll

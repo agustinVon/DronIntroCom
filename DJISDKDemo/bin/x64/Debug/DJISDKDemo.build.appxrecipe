@@ -73,6 +73,9 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\projects\DJISDKDemo\DJISDKDemo\pthread_dll-x64.dll">
+      <PackagePath>pthread_dll-x64.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\projects\DJISDKDemo\DJISDKDemo\bin\x64\Debug\DJISDKDemo.xr.xml">
       <PackagePath>DJISDKDemo.xr.xml</PackagePath>
     </AppxPackagedFile>
