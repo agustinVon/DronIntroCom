@@ -32,7 +32,6 @@ namespace DJISDKDemo
 
             //Replace with your registered App Key. Make sure your App Key matched your application's package name on DJI developer center.
             DJISDKManager.Instance.RegisterApp("ba7e2142664cf62b2a46275e");
-
         }
 
         private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDKError resultCode)
@@ -60,6 +59,26 @@ namespace DJISDKDemo
                     //get the camera type and observe the CameraTypeChanged event.
                     System.Diagnostics.Debug.WriteLine("working.");
                     DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).CameraTypeChanged += OnCameraTypeChanged;
+                    DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).CameraWorkModeChanged += async delegate (object sender, CameraWorkModeMsg? value)
+                    {
+                        await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+                        {
+                            if (value != null)
+                            {
+                                ModeTB.Text = value.Value.value.ToString();
+                            }
+                        });
+                    };
+                    DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).RecordingTimeChanged += async delegate (object sender, IntMsg? value)
+                    {
+                        await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+                        {
+                            if (value != null)
+                            {
+                                RecordTimeTB.Text = value.Value.value.ToString();
+                            }
+                        });
+                    };
                     var type = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).GetCameraTypeAsync();
                     OnCameraTypeChanged(this, type.value);
                 });
@@ -132,5 +151,76 @@ namespace DJISDKDemo
 
             }
         }
+
+        private async void SetCameraWorkModeToShootPhoto_Click(object sender, RoutedEventArgs e)
+        {
+            SetCameraWorkMode(CameraWorkMode.SHOOT_PHOTO);
+        }
+
+        private void SetCameraModeToRecord_Click(object sender, RoutedEventArgs e)
+        {
+            SetCameraWorkMode(CameraWorkMode.RECORD_VIDEO);
+        }
+
+        private async void SetCameraWorkMode(CameraWorkMode mode)
+        {
+            if (DJISDKManager.Instance.ComponentManager != null)
+            {
+                CameraWorkModeMsg workMode = new CameraWorkModeMsg
+                {
+                    value = mode,
+                };
+                var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).SetCameraWorkModeAsync(workMode);
+                if (retCode != SDKError.NO_ERROR)
+                {
+                    OutputTB.Text = "Set camera work mode to " + mode.ToString() + "failed, result code is " + retCode.ToString();
+                }
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
+
+        public async void StartRecordVideo_Click(object sender, RoutedEventArgs e)
+        {
+            if (DJISDKManager.Instance.ComponentManager != null)
+            {
+                var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).StartRecordAsync();
+                if (retCode != SDKError.NO_ERROR)
+                {
+                    OutputTB.Text = "Failed to record video, result code is " + retCode.ToString();
+                }
+                else
+                {
+                    OutputTB.Text = "Start Recording video successfully";
+                }
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
+
+        public async void StopRecordVideo_Click(object sender, RoutedEventArgs e)
+        {
+            if (DJISDKManager.Instance.ComponentManager != null)
+            {
+                var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).StopRecordAsync();
+                if (retCode != SDKError.NO_ERROR)
+                {
+                    OutputTB.Text = "Failed to stop record video, result code is " + retCode.ToString();
+                }
+                else
+                {
+                    OutputTB.Text = "Stop record video successfully";
+                }
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
+
     }
 }

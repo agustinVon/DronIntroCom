@@ -9,6 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-       <SwapChainPanel x:Name="swapChainPanel"/>
+        <SwapChainPanel x:Name="swapChainPanel" Margin="10,0,10,157"/>
+        <TextBlock x:Name="ModeTB" Margin="10,848,1257,6"/>
+        <TextBlock x:Name="OutputTB" Margin="258,857,1022,0" />
+        <TextBlock x:Name="RecordTimeTB" Margin="495,857,801,9"/>
+        <Button Margin="1063,866,0,0" VerticalAlignment="Top" Click="SetCameraWorkModeToShootPhoto_Click">Set shoot photo work mode</Button>
+        <Button Margin="1063,903,0,0" VerticalAlignment="Top" Width="194" Click="SetCameraModeToRecord_Click">Set shoot video work mode</Button>
+        <Button x:Name="StartShootPhoto" Click="StartRecordVideo_Click" Width="132" Margin="1343,866,0,0" VerticalAlignment="Top" Height="31">Shoot photo</Button>
+        <Button x:Name="StartShootVideo" Click="StartRecordVideo_Click" Margin="1343,902,0,0" VerticalAlignment="Top" Width="132">Start record video</Button>
+        <Button x:Name="StopShootVideo" Click="StopRecordVideo_Click" Margin="1343,939,0,0" VerticalAlignment="Top" Width="132">Stop record video</Button>
     </Grid>
 </Page>
