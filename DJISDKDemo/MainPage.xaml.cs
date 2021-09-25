@@ -202,6 +202,26 @@ namespace DJISDKDemo
             }
         }
 
+        public async void ShootPhoto_Click(object sender, RoutedEventArgs e)
+        {
+            if (DJISDKManager.Instance.ComponentManager != null)
+            {
+                var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).StartShootPhotoAsync();
+                if (retCode != SDKError.NO_ERROR)
+                {
+                    OutputTB.Text = "Failed to record video, result code is " + retCode.ToString();
+                }
+                else
+                {
+                    OutputTB.Text = "Start Recording video successfully";
+                }
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
+
         public async void StopRecordVideo_Click(object sender, RoutedEventArgs e)
         {
             if (DJISDKManager.Instance.ComponentManager != null)
@@ -222,5 +242,35 @@ namespace DJISDKDemo
             }
         }
 
+        public void Throtle(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            float throtleValue = (float) e.NewValue;
+            System.Diagnostics.Debug.WriteLine(string.Format("Current throtle value: {0}", throtleValue));
+            DJISDKManager.Instance.VirtualRemoteController.UpdateJoystickValue(throtleValue, 0, 0, 0);
+        }
+
+        public void TakeOff(object sender, RoutedEventArgs e)
+        {
+            if(DJISDKManager.Instance.ComponentManager != null)
+            {
+                DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartTakeoffAsync();
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
+
+        public void Land(object sender, RoutedEventArgs e)
+        {
+            if (DJISDKManager.Instance.ComponentManager != null)
+            {
+                DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartAutoLandingAsync();
+            }
+            else
+            {
+                OutputTB.Text = "The application hasn't been registered successfully yet.";
+            }
+        }
     }
 }

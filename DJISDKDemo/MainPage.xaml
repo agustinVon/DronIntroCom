@@ -9,14 +9,70 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SwapChainPanel x:Name="swapChainPanel" Margin="10,0,10,157"/>
-        <TextBlock x:Name="ModeTB" Margin="10,848,1257,6"/>
-        <TextBlock x:Name="OutputTB" Margin="258,857,1022,0" />
-        <TextBlock x:Name="RecordTimeTB" Margin="495,857,801,9"/>
-        <Button Margin="1063,866,0,0" VerticalAlignment="Top" Click="SetCameraWorkModeToShootPhoto_Click">Set shoot photo work mode</Button>
-        <Button Margin="1063,903,0,0" VerticalAlignment="Top" Width="194" Click="SetCameraModeToRecord_Click">Set shoot video work mode</Button>
-        <Button x:Name="StartShootPhoto" Click="StartRecordVideo_Click" Width="132" Margin="1343,866,0,0" VerticalAlignment="Top" Height="31">Shoot photo</Button>
-        <Button x:Name="StartShootVideo" Click="StartRecordVideo_Click" Margin="1343,902,0,0" VerticalAlignment="Top" Width="132">Start record video</Button>
-        <Button x:Name="StopShootVideo" Click="StopRecordVideo_Click" Margin="1343,939,0,0" VerticalAlignment="Top" Width="132">Stop record video</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <SwapChainPanel Grid.Row="0" x:Name="swapChainPanel"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock x:Name="ModeTB" Margin="40,10,40,0"/>
+                <TextBlock x:Name="OutputTB" Margin="40,10,40,0"/>
+                <TextBlock x:Name="RecordTimeTB" Margin="40,10,40,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Padding="0">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Click="SetCameraWorkModeToShootPhoto_Click" Width="194">Set shoot photo work mode</Button>
+                <Button Click="SetCameraModeToRecord_Click">Set shoot video work mode</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Padding="0">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:Name="StartShootPhoto" Click="StartRecordVideo_Click" >Shoot photo</Button>
+                <Button x:Name="StartShootVideo" Click="StartRecordVideo_Click" >Start record video</Button>
+                <Button x:Name="StopShootVideo" Click="StopRecordVideo_Click" >Stop record video</Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" Padding="10">
+                <TextBlock>Throtle</TextBlock>
+                <Slider Minimum="-1" Maximum="1" ValueChanged="Throtle"></Slider>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Click="TakeOff">Take off</Button>
+                <Button Click="Land" HorizontalAlignment="Center">Land</Button>
+            </StackPanel>
+           
+        </Grid>
     </Grid>
 </Page>

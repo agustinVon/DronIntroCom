@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jYgFyR6DAEwgiY/9iTYci6QSMch17AwCaMiWhlhF3snaZwX7NIpAyuTS0cZ6wA3Pt8vt2zLzfOTG2i7yJZeRJQ==",
+  "dgSpecHash": "yviOmkV1cZOxCltMo9gOue6xkL07ouaAbGCKIa+E0ry0hCL5OH1HvnE3Jl3MqcHaV1h6wLfKS1BVPMmI4hDnqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fliav\\tpAgus\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
+  "projectFilePath": "C:\\Users\\Pc\\projects\\dron\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",

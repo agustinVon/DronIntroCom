@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-EFK973H</Machine>
-    <WindowsUser>fliav</WindowsUser>
+    <Machine>DESKTOP-E79SE19</Machine>
+    <WindowsUser>Pc</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,115 +10,115 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>6254d26d-fc4e-40e2-8c2d-cce3a314271a</PackageIdentityName>
     <PackageIdentityPublisher>CN=Pc</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\DJISDKDemo.exe">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\DJISDKDemo.exe">
       <PackagePath>entrypoint\DJISDKDemo.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJIWindowsSDK\DJIWindowsSDK.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJIWindowsSDK\DJIWindowsSDK.dll">
       <PackagePath>DJIWindowsSDK.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\x64\Debug\DJIVideoParser\DJIVideoParser.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\x64\Debug\DJIVideoParser\DJIVideoParser.dll">
       <PackagePath>DJIVideoParser.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJIWindowsSDK\DJIWindowsWrapper.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJIWindowsSDK\DJIWindowsWrapper.dll">
       <PackagePath>DJIWindowsWrapper.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\x64\Debug\DJIVideoParser\DJIVideoParser.winmd">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\x64\Debug\DJIVideoParser\DJIVideoParser.winmd">
       <PackagePath>DJIVideoParser.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJIWindowsSDK\DJIWindowsWrapper.winmd">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJIWindowsSDK\DJIWindowsWrapper.winmd">
       <PackagePath>DJIWindowsWrapper.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\avcodec-58.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\avcodec-58.dll">
       <PackagePath>avcodec-58.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\avdevice-58.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\avdevice-58.dll">
       <PackagePath>avdevice-58.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\avfilter-7.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\avfilter-7.dll">
       <PackagePath>avfilter-7.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\avformat-58.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\avformat-58.dll">
       <PackagePath>avformat-58.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\avutil-56.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\avutil-56.dll">
       <PackagePath>avutil-56.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\libcrypto-1_1.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\libcrypto-1_1.dll">
       <PackagePath>libcrypto-1_1.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\pthread_dll-x64.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\pthread_dll-x64.dll">
       <PackagePath>pthread_dll-x64.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\swresample-3.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\swresample-3.dll">
       <PackagePath>swresample-3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\swscale-5.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\swscale-5.dll">
       <PackagePath>swscale-5.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\DJISDKDemo.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\DJISDKDemo.xr.xml">
       <PackagePath>DJISDKDemo.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\packages\ANGLE.WindowsStore.2.1.13\build\native\..\..\bin\UAP\x64\libEGL.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\packages\ANGLE.WindowsStore.2.1.13\build\native\..\..\bin\UAP\x64\libEGL.dll">
       <PackagePath>libEGL.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\packages\ANGLE.WindowsStore.2.1.13\build\native\..\..\bin\UAP\x64\libGLESv2.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\packages\ANGLE.WindowsStore.2.1.13\build\native\..\..\bin\UAP\x64\libGLESv2.dll">
       <PackagePath>libGLESv2.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
@@ -127,10 +127,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fliav\tpAgus\DronIntroCom\DJISDKDemo\bin\x64\Debug\Core\DJISDKDemo.exe">
+    <AppxPackagedFile Include="C:\Users\Pc\projects\dron\DronIntroCom\DJISDKDemo\bin\x64\Debug\Core\DJISDKDemo.exe">
       <PackagePath>DJISDKDemo.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

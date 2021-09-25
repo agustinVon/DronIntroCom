@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="DJISDKDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJISDKDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='2' x:Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <SwapChainPanel x:ConnectionId='3' Grid.Row="0" x:Name="swapChainPanel"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock x:ConnectionId='12' x:Name="ModeTB" Margin="40,10,40,0"/>
+                <TextBlock x:ConnectionId='13' x:Name="OutputTB" Margin="40,10,40,0"/>
+                <TextBlock x:ConnectionId='14' x:Name="RecordTimeTB" Margin="40,10,40,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Padding="0">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:ConnectionId='10'                                             Width="194">Set shoot photo work mode</Button>
+                <Button x:ConnectionId='11'                                    >Set shoot video work mode</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Padding="0">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:ConnectionId='7' x:Name="StartShootPhoto"                                >Shoot photo</Button>
+                <Button x:ConnectionId='8' x:Name="StartShootVideo"                                >Start record video</Button>
+                <Button x:ConnectionId='9' x:Name="StopShootVideo"                               >Stop record video</Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" Padding="10">
+                <TextBlock>Throtle</TextBlock>
+                <Slider x:ConnectionId='6' Minimum="-1" Maximum="1"                       ></Slider>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:ConnectionId='4'                >Take off</Button>
+                <Button x:ConnectionId='5'              HorizontalAlignment="Center">Land</Button>
+            </StackPanel>
+           
+        </Grid>
+    </Grid>
+</Page>
+
