@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yviOmkV1cZOxCltMo9gOue6xkL07ouaAbGCKIa+E0ry0hCL5OH1HvnE3Jl3MqcHaV1h6wLfKS1BVPMmI4hDnqQ==",
+  "dgSpecHash": "fRZbHwUKo1NUbFaIh6qArDrzwGNwaPx5o4JnMb3MHYjjeHmFydCdkKp+3a7MVqgn63UMtnZHgV2aqbLOihhqEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pc\\projects\\dron\\DronIntroCom\\DJISDKDemo\\DJISDKDemo.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,8 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.compiler\\2.2.10-rel-29722-00\\runtime.win10-x86.microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.sharedlibrary\\2.2.8-rel-29722-00\\runtime.win10-x86.microsoft.net.native.sharedlibrary.2.2.8-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.12\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
+    "C:\\Users\\Pc\\.nuget\\packages\\writeablebitmapex\\1.6.8\\writeablebitmapex.1.6.8.nupkg.sha512"
   ],
   "logs": []
 }

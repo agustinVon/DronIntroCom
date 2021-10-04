@@ -25,6 +25,7 @@ namespace DJISDKDemo
     public sealed partial class MainPage : Page
     {
         private DJIVideoParser.Parser videoParser;
+        private VideoOperator videoOperator = new VideoOperator();
         public MainPage()
         {
             this.InitializeComponent();
@@ -55,6 +56,7 @@ namespace DJISDKDemo
                         //Set the swapChainPanel to display and set the decoded data callback.
                         videoParser.SetSurfaceAndVideoCallback(0, 0, swapChainPanel, ReceiveDecodedData);
                         DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
+                        VideoFeed feed = DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0);
                     }
                     //get the camera type and observe the CameraTypeChanged event.
                     System.Diagnostics.Debug.WriteLine("working.");
@@ -128,6 +130,7 @@ namespace DJISDKDemo
         //Decode data. Do nothing here. This function would return a bytes array with image data in RGBA format.
         async void ReceiveDecodedData(byte[] data, int width, int height)
         {
+            videoOperator.processVideoToImage(data, height, width);
         }
 
         //We need to set the camera type of the aircraft to the DJIVideoParser. After setting camera type, DJIVideoParser would correct the distortion of the video automatically.
