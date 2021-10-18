@@ -130,7 +130,7 @@ namespace DJISDKDemo
         //Decode data. Do nothing here. This function would return a bytes array with image data in RGBA format.
         async void ReceiveDecodedData(byte[] data, int width, int height)
         {
-            videoOperator.processVideoToImage(data, height, width);
+            videoOperator.ProcessVideoToImage(data, height, width);
         }
 
         //We need to set the camera type of the aircraft to the DJIVideoParser. After setting camera type, DJIVideoParser would correct the distortion of the video automatically.
